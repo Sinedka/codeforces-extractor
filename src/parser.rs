@@ -96,6 +96,7 @@ fn parse_output(problem_node: &tl::Node, parser: &tl::Parser) -> Vec<String> {
         })
         .filter(|s| s.is_some())
         .map(|s| s.unwrap())
+        .map(|s| format!("{}\n", s))
         .collect()
 }
 
