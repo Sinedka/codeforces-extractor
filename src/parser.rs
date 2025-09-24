@@ -51,6 +51,7 @@ fn parse_input(problem_node: &tl::Node, parser: &tl::Parser) -> Vec<String> {
                 .filter(|s| !s.is_empty())
                 .collect::<Vec<String>>()
                 .join("");
+            
 
             return Some(input);
         })
@@ -90,7 +91,6 @@ fn parse_output(problem_node: &tl::Node, parser: &tl::Parser) -> Vec<String> {
                 .get(parser)
                 .unwrap()
                 .inner_text(parser)
-                .trim()
                 .to_string();
             Some(output)
         })
